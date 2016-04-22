@@ -62,6 +62,7 @@
 
     Private Sub FrmCalculadora_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         colorinicial = Me.BackColor
+
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboResultados.SelectedIndexChanged
