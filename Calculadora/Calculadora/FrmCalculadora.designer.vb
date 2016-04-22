@@ -32,6 +32,8 @@ Partial Class FrmCalculadora
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.lstResultados = New System.Windows.Forms.ListBox()
+        Me.cboResultados = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'txtNum1
@@ -140,12 +142,30 @@ Partial Class FrmCalculadora
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Resultado"
         '
+        'lstResultados
+        '
+        Me.lstResultados.FormattingEnabled = True
+        Me.lstResultados.Location = New System.Drawing.Point(12, 214)
+        Me.lstResultados.Name = "lstResultados"
+        Me.lstResultados.Size = New System.Drawing.Size(171, 134)
+        Me.lstResultados.TabIndex = 12
+        '
+        'cboResultados
+        '
+        Me.cboResultados.FormattingEnabled = True
+        Me.cboResultados.Location = New System.Drawing.Point(191, 214)
+        Me.cboResultados.Name = "cboResultados"
+        Me.cboResultados.Size = New System.Drawing.Size(187, 21)
+        Me.cboResultados.TabIndex = 13
+        '
         'FrmCalculadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(405, 225)
+        Me.ClientSize = New System.Drawing.Size(385, 354)
+        Me.Controls.Add(Me.cboResultados)
+        Me.Controls.Add(Me.lstResultados)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -172,5 +192,6 @@ Partial Class FrmCalculadora
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-
+    Friend WithEvents lstResultados As ListBox
+    Friend WithEvents cboResultados As ComboBox
 End Class

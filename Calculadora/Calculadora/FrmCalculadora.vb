@@ -22,7 +22,8 @@
                 End If
         End Select
         If operok = False Then
-            lblResultado.Text = "Error"
+            'lblResultado.Text = "Error"
+            MsgBox("Error")
         Else
             lblResultado.Text = resultado 'Muestro el resultado
         End If
@@ -52,5 +53,17 @@
 
     Private Sub cmdSuma_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSuma.Click
         efectuo("+")
+    End Sub
+
+    Private Sub FrmCalculadora_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboResultados.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub lstResultado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstResultados.SelectedIndexChanged
+
     End Sub
 End Class
