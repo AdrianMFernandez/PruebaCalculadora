@@ -1,8 +1,10 @@
 ﻿Public Class FrmCalculadora
 
+    Dim colorinicial As Object
     Sub efectuo(operacion As String)
         Dim num1, num2, resultado As Double 'Decimal mas grande en visual basic
         Dim operok As Boolean = True
+        Dim TextoMostrar As String
         num1 = numero(txtNum1.Text)
         num2 = numero(txtNum2.Text)
         txtNum1.Text = num1 'Cambia o no la caja de texto al valor q utilizo para hacer la operacion (1.1 a 11)
@@ -26,6 +28,9 @@
             MsgBox("Error")
         Else
             lblResultado.Text = resultado 'Muestro el resultado
+            TextoMostrar = num1 & operacion & num2 & "=" & resultado
+            lstResultados.Items.Add(TextoMostrar)
+            cboResultados.Items.Add(TextoMostrar)
         End If
     End Sub
     Function numero(ByVal valor As String) As Double
@@ -56,7 +61,7 @@
     End Sub
 
     Private Sub FrmCalculadora_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        colorinicial = Me.BackColor
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboResultados.SelectedIndexChanged
@@ -65,5 +70,14 @@
 
     Private Sub lstResultado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstResultados.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub chkFondo_CheckedChanged(sender As Object, e As EventArgs) Handles chkFondo.CheckedChanged
+        If chkFondo.Checked Then
+            Me.BackColor = Color.Yellow
+        Else
+            'volvemos al color inicial
+            Me.BackColor = colorinicial
+        End If
     End Sub
 End Class

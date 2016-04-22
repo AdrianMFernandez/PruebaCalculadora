@@ -34,6 +34,8 @@ Partial Class FrmCalculadora
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lstResultados = New System.Windows.Forms.ListBox()
         Me.cboResultados = New System.Windows.Forms.ComboBox()
+        Me.chkFondo = New System.Windows.Forms.CheckBox()
+        Me.chkResultados = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'txtNum1
@@ -158,12 +160,34 @@ Partial Class FrmCalculadora
         Me.cboResultados.Size = New System.Drawing.Size(187, 21)
         Me.cboResultados.TabIndex = 13
         '
+        'chkFondo
+        '
+        Me.chkFondo.AutoSize = True
+        Me.chkFondo.Location = New System.Drawing.Point(13, 355)
+        Me.chkFondo.Name = "chkFondo"
+        Me.chkFondo.Size = New System.Drawing.Size(95, 17)
+        Me.chkFondo.TabIndex = 14
+        Me.chkFondo.Text = "Fondo Amarillo"
+        Me.chkFondo.UseVisualStyleBackColor = True
+        '
+        'chkResultados
+        '
+        Me.chkResultados.AutoSize = True
+        Me.chkResultados.Location = New System.Drawing.Point(13, 379)
+        Me.chkResultados.Name = "chkResultados"
+        Me.chkResultados.Size = New System.Drawing.Size(115, 17)
+        Me.chkResultados.TabIndex = 15
+        Me.chkResultados.Text = "Muestro Reultados"
+        Me.chkResultados.UseVisualStyleBackColor = True
+        '
         'FrmCalculadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(385, 354)
+        Me.ClientSize = New System.Drawing.Size(385, 402)
+        Me.Controls.Add(Me.chkResultados)
+        Me.Controls.Add(Me.chkFondo)
         Me.Controls.Add(Me.cboResultados)
         Me.Controls.Add(Me.lstResultados)
         Me.Controls.Add(Me.Label3)
@@ -194,4 +218,6 @@ Partial Class FrmCalculadora
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents lstResultados As ListBox
     Friend WithEvents cboResultados As ComboBox
+    Friend WithEvents chkFondo As CheckBox
+    Friend WithEvents chkResultados As CheckBox
 End Class
